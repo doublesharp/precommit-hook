@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-var Validate = require('git-validate');
+const Validate = require('git-validate');
 
-Validate.copy('../jshintrc', '.jshintrc');
-Validate.copy('../jshintignore', '.jshintignore');
-Validate.installScript('lint', 'jshint .');
+Validate.copy('../eslint/.eslintrc.js', '.eslintrc.js');
+Validate.copy('../eslint/.eslintignore', '.eslintignore');
+Validate.copy('../eslint/test/.eslintrc.js', './test/.eslintrc.js');
+Validate.installScript('lint', 'eslint .');
 Validate.installScript('validate', 'npm ls');
-Validate.configureHook('pre-commit', ['lint', 'validate', 'test']);
+Validate.configureHook('pre-commit', ['lint', 'validate']);

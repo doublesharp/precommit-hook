@@ -1,7 +1,7 @@
 {
   "author": "Nathan LaFreniere <quitlahok@gmail.com> (https://github.com/nlf)",
   "name": "precommit-hook",
-  "description": "A useful pre-commit hook for git based projects that lints and runs npm test",
+  "description": "A useful pre-commit hook for git based projects that lints and validates before commits",
   "version": "3.0.0",
   "license": "MIT",
   "homepage": "https://github.com/nlf/precommit-hook",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "git-validate": "git+https://github.com/nlf/git-validate.git",
-    "jshint": "*"
+    "eslint": "*"
   },
   "scripts": {
     "install": "node bin/install"
